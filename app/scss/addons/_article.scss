@@ -1,0 +1,11 @@
+@import "variables";
+
+article {
+  text-align: justify;
+  margin-top: $mt;
+  .img-fluid {
+    margin-left: 1rem;
+    width: 50%;
+    float: right;
+  }
+}
