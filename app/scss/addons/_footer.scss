@@ -1,0 +1,37 @@
+footer{
+  box-sizing: border-box;
+}
+
+h5{
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+.row-footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box{
+  text-align: center;
+  line-height: 1.5;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  color: gray;
+  padding: 1rem 0;
+  a{
+    color: #ffffff;
+    text-decoration: none;
+}
+}
+.info{
+  width: 100%;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  padding: 1rem;
+}
