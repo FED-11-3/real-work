@@ -1,3 +1,5 @@
+@import "variables";
+
 footer{
   box-sizing: border-box;
 }
@@ -6,32 +8,37 @@ h5{
   font-weight: 700;
   font-size: 1.25rem;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }
 .row-footer{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .box{
   text-align: center;
   line-height: 1.5;
+  p {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .footer{
   display: flex;
   justify-content: center;
-  background: rgba(0,0,0,0.8);
+  background: $background-color;
   color: gray;
   padding: 1rem 0;
   a{
-    color: #ffffff;
+    color: $color;
     text-decoration: none;
 }
 }
 .info{
   width: 100%;
-  color: #fff;
-  background: rgba(0,0,0,0.8);
-  padding: 1rem;
+  color: $color;
+  background: $background-color;
+  padding-top: 1rem;
 }
