@@ -248,8 +248,8 @@ button.btm-close img {
   nav {
     background-color: none; }
   body .top-line {
-    text-align: center;
-    display: block; }
+    display: block;
+    text-align: center; }
   .top-line a {
     text-decoration: none;
     color: black; }
