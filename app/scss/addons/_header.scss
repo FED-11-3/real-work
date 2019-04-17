@@ -1,0 +1,104 @@
+nav {
+    background-color: black;
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar li {
+    display: inline-block;
+    background: #293333;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0px 5px;
+}
+nav .navbar {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+nav button {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 10px;
+    right: 10px;  
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    outline: none; 
+    background-color: transparent;
+}
+
+.top-line {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+.top-line a {
+    text-decoration: none;
+    color: black;
+}
+button.btm-close img {
+    width: 32px;
+    height: 32px;   
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        background-color: none;
+
+    }
+    body .top-line {
+        text-align: center;
+        display: block;
+    }
+    .top-line a {
+        text-decoration: none;
+        color: black;
+    }
+    nav .navbar{
+        display: none; 
+        position: fixed;
+        top: 0;
+    }
+    nav .navbar {
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        
+        
+    }
+    nav button {
+        display: block;
+    }
+    .navbar li {
+        display: block;
+    }
+    
+}
