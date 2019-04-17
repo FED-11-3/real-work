@@ -69,14 +69,19 @@ button.btm-close img {
     display: none;
 }
 
+.banner img {
+    max-width: 100%;
+    padding-top: 15px;
+}
+
 @media screen and (max-width: 600px) {
     nav {
         background-color: none;
-
     }
-    body .top-line {
-        text-align: center;
+     body .top-line {
         display: block;
+        text-align: center;
+
     }
     .top-line a {
         text-decoration: none;
@@ -100,5 +105,4 @@ button.btm-close img {
     .navbar li {
         display: block;
     }
-    
 }

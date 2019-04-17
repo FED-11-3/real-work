@@ -240,6 +240,10 @@ button.btm-close img {
   height: 32px;
   display: none; }
 
+.banner img {
+  max-width: 100%;
+  padding-top: 15px; }
+
 @media screen and (max-width: 600px) {
   nav {
     background-color: none; }
