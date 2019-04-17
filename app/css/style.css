@@ -385,3 +385,6 @@ h1 {
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
       max-width: 100%; } }
+
+article li {
+  margin-left: 2rem; }
