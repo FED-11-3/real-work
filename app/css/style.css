@@ -115,6 +115,44 @@ h5 {
   background: rgba(0, 0, 0, 0.8);
   padding-top: 1rem; }
 
+.feedback {
+  margin: auto;
+  padding: 1rem; }
+  .feedback h2 {
+    text-align: center; }
+  .feedback textarea {
+    padding: 1.5rem 0;
+    margin-left: 2.5rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ced4da; }
+
+.form-group {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem; }
+
+.prefix {
+  position: absolute;
+  font-size: 1.75rem;
+  color: #9e9e9e; }
+
+.prefix ~ input {
+  margin-left: 2.5rem;
+  width: 100%; }
+
+.form-control {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  padding: .3rem 0 .5rem; }
+
+button.btn {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  cursor: pointer; }
+  button.btn:hover {
+    background-color: black; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
