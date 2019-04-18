@@ -42,3 +42,8 @@ h5{
   background: $background-color;
   padding-top: 1rem;
 }
+
+#map{
+  display: flex;
+  flex-direction: row;
+}
