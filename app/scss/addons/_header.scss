@@ -78,6 +78,7 @@ button.btm-close {
 
 .top-text {
   margin-right: 5%;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -85,7 +86,6 @@ button.btm-close {
   body .top-line {
     display: block;
     text-align: center;
-
   }
 
   nav .navbar {

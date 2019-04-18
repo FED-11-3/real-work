@@ -250,7 +250,8 @@ button.btm-close img {
   padding-top: 15px; }
 
 .top-text {
-  margin-right: 5%; }
+  margin-right: 5%;
+  text-align: center; }
 
 @media screen and (max-width: 767px) {
   body .top-line {
