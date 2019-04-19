@@ -5,69 +5,49 @@ $(function () {
 
         switch (id) {
             case 'nameFF':
-                if (val.length > 2) {
-                    $(this).addClass('not_error');
-                    $(this).next('.error-box').text('');
-                } else {
-                    $(this).removeClass('not_error').addClass('error');
-                    $(this).next('.error-box').html("Введіть ім'я не менше двох символів")
-                        .css('color', 'red')
-                        .animate({'marginLeft': '3rem'}, 400)
-                        .animate({'marginLeft': '2.5rem'}, 400);
-                }
+                (val.length > 2) ? noError(this) : showErrorMsg(this);
                 break;
 
             case 'contactFF':
-                const rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+$/i;
-                if (val !== '' && rv_email.test(val)) {
-                    $(this).addClass('not_error');
-                    $(this).next('.error-box').text('');
-                } else {
-                    $(this).removeClass('not_error').addClass('error');
-                    $(this).next('.error-box').html('Неправильно введений email')
-                        .css('color', 'red')
-                        .animate({'marginLeft': '3rem'}, 400)
-                        .animate({'marginLeft': '2.5rem'}, 400);
-                }
+                const emailPattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+$/i;
+                (val !== '' && emailPattern.test(val)) ? noError(this) : showErrorMsg(this);
                 break;
 
             case 'telFF':
-                const rv_tel = /^\d[\d\(\)\ -]{4,14}\d$/;
-
-                if (val.length > 2 && val !== '' && rv_tel.test(val)) {
-                    $(this).addClass('not_error');
-                    $(this).next('.error-box').text('');
-                } else {
-                    $(this).removeClass('not_error').addClass('error');
-                    $(this).next('.error-box').html("Введіть номер телефону")
-                        .css('color', 'red')
-                        .animate({'marginLeft': '3rem'}, 400)
-                        .animate({'marginLeft': '2.5rem'}, 400);
-                }
+                const telPattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){8,14}(\s*)?$/;
+                (val.length > 2 && val !== '' && telPattern.test(val)) ? noError(this) : showErrorMsg(this);
                 break;
 
             case 'projectFF':
-                if (val !== '' && val.length < 5000) {
-                    $(this).addClass('not_error');
-                    $(this).next('.error-box').text('');
-                } else {
-                    $(this).removeClass('not_error').addClass('error');
-                    $(this).next('.error-box').html('поле "Повідомлення" не заповнено')
-                        .css('color', 'red')
-                        .animate({'marginLeft': '3rem'}, 400)
-                        .animate({'marginLeft': '2.5rem'}, 400);
-                }
+                (val.length < 250) ? noError(this) : showErrorMsg(this);
                 break;
         }
     });
+
+    let isError = true;
+
+    function noError(self) {
+        $(self).next('.error-box').text('');
+        isError = false;
+    }
+
+    function showErrorMsg(self) {
+        isError = true;
+        let type = $(self).attr('type');
+        let error = $(self).next('.error-box')
+            .animate({'marginLeft': '3rem'}, 400)
+            .animate({'marginLeft': '2.5rem'}, 400);
+        (type === 'text') ? error.html("Введіть не менше трьох символів") :
+            (type === 'email') ? error.html('Неправильно введений email') :
+                (type === 'tel') ? error.html("Введіть номер телефону") :
+                    error.html("Помилка, спробуйте ще раз");
+    }
 
     document.getElementById('contact-form').addEventListener('submit', function (evt) {
         const http = new XMLHttpRequest();
         let th = $(this);
         evt.preventDefault();
-
-        if ($('.not_error').length === 4) {
-
+        if(!isError) {
             http.open("POST", "contact.php", true);
             http.onreadystatechange = function () {
                 if (http.readyState === 4 && http.status === 200) {

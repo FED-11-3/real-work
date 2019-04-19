@@ -6,8 +6,6 @@
 @import "./addons/header";
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,19 +21,15 @@ body {
 h2 {
   font-weight: 300;
   font-size: 200%;
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     font-size: 170%;
-  }
-
-  @media (max-width: 767px) {
-    font-size: 140%;
   }
 }
 
 h1 {
   font-weight: 300;
   font-size: 250%;
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     font-size: 200%;
   }
 
@@ -50,7 +44,7 @@ h1 {
   margin: 1.5rem auto;
   max-width: 1140px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     max-width: 720px;
     padding: 5px;
   }
@@ -88,8 +82,6 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
-  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
-  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
   transition: all .3s ease;
 
@@ -100,6 +92,10 @@ h1 {
 
   &:active {
     background-color: rgba(0, 0, 0, 1);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -119,6 +115,11 @@ h1 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.delivery {
+  margin-left: 10%;
+  margin-top: -15px;
 }
 
 article li {

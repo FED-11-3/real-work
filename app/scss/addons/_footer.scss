@@ -14,6 +14,10 @@ h5{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  @media (max-width: 575px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .box{
@@ -22,6 +26,9 @@ h5{
   p {
     font-size: .9rem;
     margin-bottom: 1rem;
+  }
+  @media (max-width: 575px) {
+    padding: 10px;
   }
 }
 
