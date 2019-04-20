@@ -22,7 +22,24 @@ $(function () {
                 (val.length < 250) ? noError(this) : showErrorMsg(this);
                 break;
         }
+
+        enableButton();
+
     });
+
+    function enableButton() {
+        let emptyField = 0;
+        let submitButton = $("button[type=submit]");
+        let inputs = $('input:not([type=file])');
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === '') {
+                emptyField++;
+            }
+        }
+        (emptyField === 0 && isError === false) ?
+            submitButton.removeAttr("disabled") :
+            submitButton.attr("disabled", "disabled");
+    }
 
     let isError = true;
 
@@ -47,7 +64,7 @@ $(function () {
         const http = new XMLHttpRequest();
         let th = $(this);
         evt.preventDefault();
-        if(!isError) {
+        if (!isError) {
             http.open("POST", "contact.php", true);
             http.onreadystatechange = function () {
                 if (http.readyState === 4 && http.status === 200) {
