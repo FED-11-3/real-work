@@ -40,10 +40,6 @@ article {
       max-width: 350px;
       margin: 10px auto; } }
 
-@media (max-width: 767px) {
-  .col-3:not(:last-child) {
-    padding-right: 7px; } }
-
 .card {
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,7 +50,7 @@ article {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 393px;
+  min-height: 400px;
   -webkit-border-radius: .25rem;
           border-radius: .25rem;
   font-weight: 400;
@@ -63,7 +59,7 @@ article {
   .card .card-img-top {
     width: 100%; }
   .card-body {
-    padding: 1.25rem; }
+    padding: 0.7rem; }
     .card-body h4 {
       font-weight: 400;
       font-size: 140%;
@@ -321,6 +317,10 @@ button.btm-close img {
     display: block; }
   .navbar li {
     display: block; } }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; }
 
 * {
   -webkit-box-sizing: border-box;

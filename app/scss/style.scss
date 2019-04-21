@@ -5,6 +5,11 @@
 @import "./addons/contacts";
 @import "./addons/header";
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
