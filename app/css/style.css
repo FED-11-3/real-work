@@ -166,7 +166,7 @@ h5 {
   .feedback textarea {
     padding: 1.5rem 0;
     margin-left: 2.5rem;
-    width: 100%;
+    width: 85%;
     border: none;
     border-bottom: 1px solid #ced4da; }
 
@@ -181,7 +181,7 @@ h5 {
 
 .prefix ~ input {
   margin-left: 2.5rem;
-  width: 100%; }
+  width: 85%; }
 
 .form-control {
   display: block;
