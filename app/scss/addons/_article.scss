@@ -2,7 +2,12 @@
 
 article {
   text-align: justify;
-  margin-top: $mt;
+  margin-top: 1rem;
+
+  p {
+    margin-top: 1rem;
+  }
+
   .img-fluid {
     margin-left: 1rem;
     width: 50%;

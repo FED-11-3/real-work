@@ -1,6 +1,8 @@
 article {
   text-align: justify;
-  margin-top: 1.5rem; }
+  margin-top: 1rem; }
+  article p {
+    margin-top: 1rem; }
   article .img-fluid {
     margin-left: 1rem;
     width: 50%;
