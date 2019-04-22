@@ -232,17 +232,6 @@ nav {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center; }
-  nav button {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 10px;
-    right: 10px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    background-color: transparent; }
   nav .navbar {
     padding: 10px;
     margin: 0 5px; }
@@ -290,35 +279,40 @@ nav {
   text-decoration: none;
   color: black; }
 
-button.btm-close img {
-  width: 32px;
-  height: 32px;
-  display: none; }
-
 .banner img {
   max-width: 100%;
   padding-top: 15px; }
 
 .top-text {
-  margin-right: 5%;
   text-align: center; }
 
 @media screen and (max-width: 767px) {
-  body .top-line {
+  .top-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center; }
+  nav .navbar li {
     display: block;
-    text-align: center; }
-  nav .navbar {
-    display: none;
-    position: fixed;
-    top: 0; }
-  nav .navbar {
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); }
-  nav button {
-    display: block; }
-  .navbar li {
-    display: block; } }
+    text-align: center; } }
 
 html, body {
   width: 100%;
