@@ -312,7 +312,9 @@ nav {
             align-content: center; }
   nav .navbar li {
     display: block;
-    text-align: center; } }
+    text-align: center; }
+  .top-text {
+    display: none; } }
 
 html, body {
   width: 100%;
